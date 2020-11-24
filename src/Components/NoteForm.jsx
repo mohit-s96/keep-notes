@@ -41,7 +41,12 @@ function NoteForm(props) {
         }
     }
     const discard = () => {
-        setState(initialState);
+        setState({
+            ...state,
+            date_field: value.getDate() + '/' + (value.getMonth() + 1) + '/' + value.getFullYear(),
+            title_field: '', 
+            note_field: '', 
+        });
     }
     function onChange(nextValue) {  
         setValue(nextValue);
@@ -62,6 +67,7 @@ function NoteForm(props) {
         }
         if(!error){
             showCards();
+            console.log(state);
             let body = {...state};
             props.editNoteState(body);
             setState(initialState);

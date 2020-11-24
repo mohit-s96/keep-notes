@@ -37,6 +37,7 @@ export const setEditState = body => dispatch => {
         });
 }
 export const editNoteState = body => dispatch => {
+    dispatch({type: CLEAR_ERRORS});
     dispatch({
         type: EDIT_NOTE,
         payload: body

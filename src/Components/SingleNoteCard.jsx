@@ -10,13 +10,9 @@ function SingleNoteCard(props) {
     const setDivCenter = function () {
 
         var div = document.querySelector('.modal-container');
-        var Mwidth = div.offsetWidth;
         var Mheight = div.offsetHeight;
-        var Wwidth = window.innerWidth;
         var Wheight = window.innerHeight;
         div.style.top = ((Wheight - Mheight ) / 2 +window.pageYOffset ) + "px";
-        // div.style.left = ((Wwidth - Mwidth) / 2 +window.pageXOffset ) + "px";
-
     };
     const setOverlay = () => {
         var overlay = document.querySelector('.overlay');
