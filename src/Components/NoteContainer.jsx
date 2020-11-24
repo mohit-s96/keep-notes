@@ -25,7 +25,7 @@ function NoteContainer(props) {
                         )
                     })
                     :
-                    null
+                    <div className="no-notes">No notes created yet...create one to see it here!!</div>
                     :
                     null
                 }
