@@ -1,0 +1,9 @@
+export const SET_NOTE = "SET_NOTE";
+export const SET_TITLE_ERROR = "SET_TITLE_ERROR";
+export const SET_NOTE_ERROR = "SET_NOTE_ERROR";
+export const CLEAR_ERRORS = "CLEAR_ERRORS";
+export const UPDATE_NOTE = "UPDATE_NOTE";
+export const RESET_EDIT = "RESET_EDIT";
+export const EDIT_NOTE = "EDIT_NOTE";
+export const SET_FROM_LOCAL_STORAGE = "SET_FROM_LOCAL_STORAGE";
+export const DELETE_NOTE = "DELETE_NOTE";

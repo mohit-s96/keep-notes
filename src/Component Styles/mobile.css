@@ -1,0 +1,44 @@
+@media only screen and (max-width: 600px){
+    .note-wrapper{
+        width: 100% !important;
+    }
+    .single-note-wrapper{
+        width: 100%;
+    }
+    .single-note-wrapper span{
+        transform: translate(340%, -200%);
+    }
+    .mobile-add-btn{
+        position: fixed;
+        left: 12px;
+        top: 85vh;
+        height: 3rem;
+        width: 3rem;
+        background-color: rgb(211, 56, 56);
+        border-radius: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 2.5em;
+        color: #fff;
+    }
+    .back-arrow{
+        position: absolute;
+        height: 2.5rem;
+        width: 2.5rem;
+        top: unset;
+        border-radius: 1.25rem;
+        align-items: unset;
+        font-size: 1.8em;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 1px;
+    }
+    .modal-container{
+        width: 95%;
+        left: 2%;
+        top: 0;
+        transform: translate(0, 0);
+    }
+}

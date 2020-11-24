@@ -1,0 +1,138 @@
+.form-wrapper{
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: #e9e3e3;
+    animation: popout 0.4s 1;
+}
+.form-heading{
+    background-color: #F57575;
+    text-align: center;
+    width: 80%;
+    margin: 1rem auto;
+    border-radius: 32px;
+}
+.form-heading h2{
+    color: #fff;
+    padding: 0.4em;
+    font-size: 1.8em;
+    font-weight: 400;
+}
+.inner-form-wrapper{
+    width: 79%;
+    background-color: #E86262;
+    margin: 0 auto;
+}
+.inner-form-wrapper form{
+    display: flex;
+    flex-direction: column;   
+}
+.input-wrapper{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    margin-left: 1.4em;
+    margin-top: 1em;
+}
+.input-wrapper label{
+    font-size: 1.2em;
+    padding: 12px;
+}
+.text-field{
+    width: 60%;
+    border: none;
+    outline: none;
+    background-color: #EEC4C4;
+    border-radius: 8px;
+    height: 2.8em;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: #2e2c29;
+    padding: 8px;
+}
+.date-text{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.date-wrapper{
+    display: flex;
+}
+.date-wrapper .text-field{
+    width: 52.7%;
+}
+.date-icon{
+    cursor: pointer;
+    background-color: #fff;
+    width: 8%;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.date-icon i {
+    color: #E86262;
+    font-size: 1rem;
+}
+.note-field{
+    min-height: 9rem;
+    width: 94%;
+    font-size: 1.2em;
+    padding: 12px;
+}
+.action-buttons-wrapper{
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    margin: 1rem auto;
+}
+.btn{
+    font-size: 0.8em;
+    width: 25%;
+    padding: 8px;
+    border-radius: 12px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    background-color: #B4EDFF;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.btn:hover{
+    background-color: #b4eeffab;
+}
+.remove-btn{
+    background-color: rgb(218, 37, 37);
+}
+.remove-btn:hover{
+    background-color: rgba(218, 37, 37, 0.76);
+}
+.input-error{
+    color: rgb(246, 233, 40);
+    text-align: center;
+    margin: 8px;
+    font-size: 0.8em;
+}
+@media only screen and (max-width: 600px){
+    .form-wrapper{
+        width: 100%;
+        display: none ;
+    }
+    .inner-form-wrapper{
+        width: 95%;
+    }
+    .form-heading{
+        width: 96%;
+    }
+    .text-field{
+        width: 90%;
+    }
+    .date-wrapper .text-field{
+        width: 82.7%;
+    }
+    .btn{
+        font-size: 0.7em;
+        padding: 6px;
+    }
+}
