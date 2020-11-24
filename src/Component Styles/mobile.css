@@ -24,7 +24,7 @@
         color: #fff;
     }
     .back-arrow{
-        position: absolute;
+        position: fixed;
         height: 2.5rem;
         width: 2.5rem;
         top: unset;

@@ -1,7 +1,9 @@
 import React from 'react';
 import {useState, useEffect} from 'react';
 import {connect} from 'react-redux';
+import store from '../redux/store';
 import PropTypes from 'prop-types';
+import {SET_TITLE_ERROR, SET_NOTE_ERROR} from '../redux/types';
 import {setNewNote, editNoteState} from '../redux/actions/actions';
 import Calendar from 'react-calendar';
 import '../Component Styles/form.css';
@@ -21,11 +23,22 @@ function NoteForm(props) {
         setState({...state, [e.target.id]: e.target.value})
     }
     const handleSubmit = () => {
-        showCards();
         const body = {...state};
-        body.id = parseInt(Math.random()*100000000);
-        setState(initialState);
-        props.setNewNote(body);
+        let errors = false;
+        if(body.title_field.length > 20 || body.title_field.trim().length === 0){
+            store.dispatch({type: SET_TITLE_ERROR});
+            errors = true;
+        }
+        if(body.note_field.length > 400 || body.note_field.trim().length === 0){
+            store.dispatch({type: SET_NOTE_ERROR});
+            errors = true;
+        }
+        if(!errors){
+            body.id = parseInt(Math.random()*100000000);
+            setState(initialState);
+            showCards();
+            props.setNewNote(body);
+        }
     }
     const discard = () => {
         setState(initialState);
@@ -40,11 +53,11 @@ function NoteForm(props) {
     const handleEdit = () => {
         let error = false;
         if(state.title_field.length > 20 || state.title_field.trim().length === 0){
-            props.setNewNote(state)
+            store.dispatch({type: SET_TITLE_ERROR});
             error = true;
         }
         if(state.note_field.length > 400 || state.note_field.trim().length === 0){
-            props.setNewNote(state)
+            store.dispatch({type: SET_NOTE_ERROR});
             error = true;
         }
         if(!error){
