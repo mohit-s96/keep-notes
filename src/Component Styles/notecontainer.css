@@ -16,6 +16,7 @@
     background-color: #A7313F;
     cursor: pointer;
     min-height: 10rem;
+    max-height: 12rem;
     min-width: 10rem;
     color: #fff;
     display: flex;
