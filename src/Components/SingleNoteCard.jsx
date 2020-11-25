@@ -50,15 +50,17 @@ function SingleNoteCard(props) {
         }
     }, [state])
     return (
-        <div className={`single-note-wrapper ${props.theme}`} onClick={showCardModal}>
-            <span onClick={() => deleteNote(props.details.id)}>X</span>
-            <h3>{props.details.title_field}</h3>
-            <h4>{props.details.date_field}</h4>
-            <button onClick={handleClick}>Edit</button>
+        <>
+            <div className={`single-note-wrapper ${props.theme}`} onClick={showCardModal}>
+                <span onClick={() => deleteNote(props.details.id)}>X</span>
+                <h3>{props.details.title_field}</h3>
+                <h4>{props.details.date_field}</h4>
+                <button onClick={handleClick}>Edit</button>
+            </div>
             {
                 state && <DetailsModal details={props.details} handler={handler}/>
             }
-        </div>
+        </>
     )
 }
 SingleNoteCard.propTypes = {
